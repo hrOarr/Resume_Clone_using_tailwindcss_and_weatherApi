@@ -6,3 +6,6 @@
   color: #ffffff;
   border: 1px solid #ffffff;
 }
+.no_display{
+	display: none;
+}
