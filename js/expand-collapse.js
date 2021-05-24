@@ -4,6 +4,7 @@ $(document).ready(function(){
 		if(clicked)return;
 		clicked = true;
 		$header = $(this);
+		// update
 		const content = $header.next();
 		const plus = $(this).find('.plus');
 		const minus = $(this).find('.minus');
