@@ -1,11 +1,3 @@
-.toast{
-  top: 50%;
-  left: 50%;
-  margin: 10px;
-  padding: 20px 40px;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-}
 .no_display{
 	display: none;
 }
