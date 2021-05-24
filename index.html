@@ -9,13 +9,37 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script type="text/javascript" src="js/expand-collapse.js"></script>
+	<script type="text/javascript" src="js/weather_api.js"></script>
 
+	<link rel="stylesheet" href="css/style.css">
+	
 	<title>
 		Asfakul Ghani Resume
 	</title>
 </head>
 <body class="bg-blue-100">
 	<div class="flex flex-col container max-w-screen-lg mx-auto bg-blue-400 rounded h-auto p-4">
+
+		<!-- Weather Toaster Start -->
+		<div class="flex flex-col toast bg-gray-300 fixed mx-auto" id="toaster" style="display: none;">
+			<div class="flex flex-col p-2">
+				<div class="flex flex-row">
+					<div class="flex">Current Weather- </div>
+					<div class="current_weather flex pl-1"></div>
+				</div>
+
+				<div class="flex flex-row">
+					<div class="flex">Temperature- </div>
+					<div class="current_temp flex pl-1"></div>
+				</div>
+
+				<div class="flex flex-row">
+					<div class="flex">Feels like- </div>
+					<div class="feels_like flex pl-1"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Weather toaster End -->
 
 		<!-- Intro start here -->
 		<div class="flex flex-col md:flex-row">
@@ -58,7 +82,7 @@
 					</span>
 				</div>
 
-				<div class="text-1xl text-left flex flex-row justify-start">
+				<div class="text-1xl text-left flex flex-row justify-start location toast-auto" data-toast="toaster">
 					<span>
 						<i class="fa fa-map-marker"> Location: </i>
 						Bahaddarhat, Chattogram
@@ -148,7 +172,7 @@
 				<!-- Skills End -->
 				<!-- Project works start -->
 				<div class="flex flex-col pt-3">
-					<div class="flex flex-row text-2xl">
+					<div class="flex flex-col text-2xl">
 						<i class="fa fa-tasks"><span class="font-bold"> Project Works</span></i>
 					</div>
 
@@ -198,7 +222,8 @@
 			</div>
 			<!-- Education, Skills, Project works End -->
 
-			<div class="flex flex-col flex-grow md:w-3/5 pl-2">
+			<!-- Right part Start -->
+			<div class="flex flex-col flex-grow md:w-3/5 pl-4">
 				<div class="flex flex-row text-2xl">
 					<i class="fa fa-trophy"><span class="font-bold"> ACHIEVEMENTS</span></i>
 				</div>
@@ -242,6 +267,7 @@
 					</ul>
 				</div>
 			</div>
+			<!-- Right part End -->
 		</div>
 		<!-- End -->
 
