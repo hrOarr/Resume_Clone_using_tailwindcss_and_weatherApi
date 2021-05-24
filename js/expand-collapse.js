@@ -6,8 +6,8 @@ $(document).ready(function(){
 		$header = $(this);
 		// update
 		const content = $header.next();
-		const plus = $(this).find('.plus');
-		const minus = $(this).find('.minus');
+		const plus = $header.find('.plus');
+		const minus = $header.find('.minus');
 
 		if(content.is(':visible')){
 			content.slideUp(500,()=>{
