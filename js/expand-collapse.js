@@ -4,26 +4,25 @@ $(document).ready(function(){
 		if(clicked)return;
 		clicked = true;
 		$header = $(this);
-		// update
+		// console.log($header)
 		const content = $header.next();
 		const plus = $header.find('.plus');
 		const minus = $header.find('.minus');
 
 		if(content.is(':visible')){
 			content.slideUp(500,()=>{
-				clicked = false;
-			});
-			minus.fadeOut(200,()=>{
-				plus.fadeIn(200);
+				minus.fadeOut(50,()=>{
+					plus.fadeIn();
+				});
 			});
 		}
 		else{
 			content.slideDown(500,()=>{
-				clicked = false;
+				plus.fadeOut(50,()=>{
+					minus.fadeIn();
+				})
 			});
-			plus.fadeOut(200,()=>{
-				minus.fadeIn(200);
-			})
 		}
+		clicked = false;
 	})
 })
