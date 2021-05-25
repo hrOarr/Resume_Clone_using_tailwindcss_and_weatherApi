@@ -6,6 +6,7 @@ $(document).ready(function(){
 		$header = $(this);
 		// console.log($header)
 		const content = $header.next();
+		// console.log(content)
 		const plus = $header.find('.plus');
 		const minus = $header.find('.minus');
 
